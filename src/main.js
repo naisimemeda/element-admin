@@ -32,6 +32,9 @@ if (process.env.NODE_ENV === 'production') {
   mockXHR()
 }
 
+import TableController from '@/components/TableController'
+Vue.component('TableController', TableController)
+
 Vue.use(Element, {
   size: Cookies.get('size') || 'medium' // set element-ui default size
 })

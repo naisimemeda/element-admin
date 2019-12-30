@@ -13,11 +13,11 @@
     </el-tabs>
     <div v-if="options.form">
       <slot />
-      <el-button-group v-if="!closeSearch">
+      <el-button-group v-if="closeSearch">
         <el-button type="primary" @click.stop="$emit('search')">搜索</el-button>
         <el-button @click.stop="$emit('cancel')">取消</el-button>
       </el-button-group>
-      <el-button v-if="!closeExport" type="success" @click.stop="$emit('export')">导出</el-button>
+      <el-button v-if="closeExport" type="success" @click.stop="$emit('export')">导出</el-button>
     </div>
   </div>
 </template>
@@ -52,13 +52,16 @@ export default {
   created() {
     if (!this.options.activeName) {
       this.activeName = this.options.tabArr[0].key
-      return
     }
-    this.activeName = this.options.activeName
+    if(this.$route.query.table) {
+      this.activeName = this.$route.query.table;
+    }
   },
   methods: {
     handleChange(val) {
-      this.$router.push(val.name)
+      let table = this.options.tabArr[val.index].url
+      let urlTable = `${table}?table=${val.name}`
+      this.$router.push(urlTable)
       this.$emit('change', this.activeName)
     }
   }

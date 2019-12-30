@@ -19,10 +19,17 @@
           <el-table-column align="center" label="手机号" width="100" prop="telephone"/>
           <el-table-column label="操作" align="center" fixed="right" width="125">
             <template slot-scope="scope">
-              <el-button size="mini" type="success">查看</el-button>
+              <el-button size="mini" type="success" @click="Modal = true">查看</el-button>
             </template>
           </el-table-column>
         </el-table>
+        <el-dialog title="查看会员" :visible.sync="Modal" width="1050px">
+          <TableController :options="controllerOptions" />
+          <span slot="footer" class="dialog-footer">
+        <el-button @click="Modal = false">取 消</el-button>
+        <el-button type="primary" @click="">确定</el-button>
+      </span>
+        </el-dialog>
       </template>
     </div>
   </div>
@@ -32,6 +39,23 @@
   export default {
     data() {
       return {
+        Modal: true,
+        controllerOptions: {
+          tabArr: [
+            {
+              label: '激活码',
+              key: 'list',
+              url: '/code/index/list',
+            },
+            {
+              label: '广告图',
+              key: 'banner',
+              url: '/code/index/banner',
+            }
+          ],
+          primaryText: '添加会员',
+          form: {}
+        },
         tableData: [{
           id: 1,
           date: '2016-05-02',

@@ -15,15 +15,8 @@
   export default {
     name: 'index',
     watch : {
-      // activeName(val) {
-      //   let urlStr = `/code/index/${val}`
-      //   this.$router.push(urlStr)
-      // },
-    },
-    created() {
-      if(this.$route.query.table) {
-        this.activeName = this.$route.query.table;
-      }
+      Modal(val) {
+      },
     },
     data() {
       return {
@@ -32,11 +25,13 @@
           tabArr: [
             {
               label: '激活码',
-              key: '/code/index/list'
+              key: 'list',
+              url: '/code/index/list',
             },
             {
               label: '广告图',
-              key: '/code/index/banner'
+              key: 'banner',
+              url: '/code/index/banner',
             }
           ],
           primaryText: '添加会员',
@@ -44,11 +39,9 @@
         }
       }
     },
+    created() {
+    },
     methods: {
-      handleClick(val, event){
-        let url = `/code/index/${val.name}?table=${val.name}`
-        this.$router.push(url)
-      }
     }
   }
 </script>

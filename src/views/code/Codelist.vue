@@ -39,7 +39,7 @@
   export default {
     data() {
       return {
-        Modal: true,
+        Modal: false,
         controllerOptions: {
           tabArr: [
             {

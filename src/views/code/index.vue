@@ -8,19 +8,26 @@
       </TableController>
     </div>
     <router-view/>
+    <BaseCheckbox v-model="lovingVue"  />
   </div>
 </template>
 
 <script>
+  import BaseCheckbox from './base-checkbox'
   export default {
     name: 'index',
     watch : {
-      Modal(val) {
-      },
+      lovingVue(val){
+        console.info(val)
+      }
+    },
+    components: {
+      BaseCheckbox
     },
     data() {
       return {
         activeName: 'list',
+        lovingVue: 1,
         controllerOptions: {
           tabArr: [
             {
@@ -42,6 +49,9 @@
     created() {
     },
     methods: {
+      xxx(value){
+        console.info(this.lovingVue)
+      }
     }
   }
 </script>

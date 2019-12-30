@@ -1,17 +1,16 @@
 <template>
   <input
-    type="number"
     :value="checked"
-    @click="xxx(1)"
+    @change="xxx($event.target)"
   >
 </template>
 
 <script>
   export default {
-    model: {
-      prop: 'value',
-      event: 'click'
-    },
+    // model: {
+    //   prop: 'value',
+    //   event: 'change'
+    // },
     props: {
       checked: String
     },
@@ -21,11 +20,12 @@
 
       }
     },
+    created() {
+      console.log(this.checked)
+    },
     methods: {
       xxx(val){
-        this.$emit('click', 12123)
-        console.log(`子组件${val}`)
-        return val
+        this.$emit('update:checked', val.value)
       }
     }
   }

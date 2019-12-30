@@ -8,7 +8,7 @@
       </TableController>
     </div>
     <router-view/>
-    <BaseCheckbox v-model="lovingVue"  />
+    <BaseCheckbox :checked.sync="lovingVue" />
   </div>
 </template>
 
@@ -27,7 +27,7 @@
     data() {
       return {
         activeName: 'list',
-        lovingVue: 1,
+        lovingVue: "",
         controllerOptions: {
           tabArr: [
             {
@@ -47,10 +47,14 @@
       }
     },
     created() {
+      this.hah()
     },
     methods: {
       xxx(value){
         console.info(this.lovingVue)
+      },
+      hah(){
+        this.lovingVue = "dasd"
       }
     }
   }

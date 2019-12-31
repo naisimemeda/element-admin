@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <div class="container--shadow">
-      <template>
         <el-table
           :data="tableData"
           border
@@ -19,27 +18,30 @@
           <el-table-column align="center" label="手机号" width="100" prop="telephone"/>
           <el-table-column label="操作" align="center" fixed="right" width="125">
             <template slot-scope="scope">
-              <el-button size="mini" type="success" @click="Modal = true">查看</el-button>
+              <el-button size="mini" type="success" @click="modal = true">查看</el-button>
             </template>
           </el-table-column>
         </el-table>
-        <el-dialog title="查看会员" :visible.sync="Modal" width="1050px">
-          <TableController :options="controllerOptions" />
-          <span slot="footer" class="dialog-footer">
-        <el-button @click="Modal = false">取 消</el-button>
-        <el-button type="primary" @click="">确定</el-button>
-      </span>
-        </el-dialog>
-      </template>
+      <div>
+        <Modal :show.sync="modal"/>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+  import Modal from './CodeModal'
   export default {
+    components: {
+      Modal
+    },
+    watch: {
+      modal() {
+      }
+    },
     data() {
       return {
-        Modal: false,
+        modal: false,
         controllerOptions: {
           tabArr: [
             {

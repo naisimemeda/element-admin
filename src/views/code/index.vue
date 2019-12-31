@@ -33,12 +33,12 @@
             {
               label: '激活码',
               key: 'list',
-              url: '/code/index/list',
+              url: '/code/list/code',
             },
             {
               label: '广告图',
               key: 'banner',
-              url: '/code/index/banner',
+              url: '/code/list/banner',
             }
           ],
           primaryText: '添加会员',

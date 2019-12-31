@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>111</title>
+  <style>
+    .container {
+      margin: 0 auto;
+      height: 200px;
+      width: 1200px;
+    }
+
+    .box {
+      display: flex;
+    }
+
+    .plugin_headers {
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    .plugin_info {
+      margin: 0 50px;
+      flex: 1;
+    }
+
+    .plugin_width {
+      width: 500px;
+      height: 80px;
+      display: flex;
+      margin-top: 15px;
+      flex: 1;
+    }
+
+    .number-border {
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      text-align: center;
+      line-height: 30px;
+      color: #ffffff;
+      margin-bottom: 5px;
+      border: 2px solid #000000;
+      background-color: #FF9800;
+      border-radius: 20px;
+    }
+
+    .border-bottom {
+      width: 120px;
+      margin-left: 5px;
+      display: inline-block;
+      font-size: 15px;
+      border-bottom: 3px solid #FF9800;
+    }
+
+    .download {
+      line-height: 80px;
+      margin-left: 15px;
+      display: inline-block;
+    }
+
+    .download button {
+      width: 160px;
+      height: 35px;
+      border-radius: 200px;
+      background-color: rgba(255, 255, 255, 1);
+      border: 1px solid rgba(255, 152, 0, 1);
+      color: rgba(255, 152, 0, 1);
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .image {
+      display: inline-block;
+    }
+
+    .image img {
+      width: 50px;
+      height: 50px;
+      border-radius: 15px;
+    }
+
+    .title {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .version {
+      font-size: 13px;
+    }
+
+    .info {
+      display: inline-block;
+      margin-left: 15px;
+    }
+
+    .introduce {
+      height: 80px;
+      display: inline-block;
+    }
+
+    .function {
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    .step {
+      flex: 1;
+      margin: 0 20px;
+      text-align: left;
+    }
+
+    .step-font {
+      font-size: 70px;
+      color: #FF9800;
+      display: inline-block;
+    }
+
+    .step-info {
+      width: 250px;
+      font-size: 13px;
+      margin-left: 15px;
+      display: inline-block;
+    }
+
+    .step-download {
+       margin-top: 10px;
+    }
+    .step-download button {
+      width: 160px;
+      height: 35px;
+      border-radius: 200px;
+      background-color: #FF9800;
+      border: 1px solid rgba(255, 152, 0, 1);
+      color: #ffffff;
+      font-size: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <div class="container">
+    <div class="plugin_headers">
+      <h2>插件下载</h2>
+    </div>
+    <div class="box">
+      <div class="plugin_info">
+        <div>
+          <div class="number-border">1</div>
+          <div class="border-bottom">下载安装脚本</div>
+        </div>
+        <div class="plugin_width">
+          <div class="introduce">
+            <div style="margin-top: 8px">
+              <div class="image">
+                <img src="https://yx-xiaohuang.oss-cn-shanghai.aliyuncs.com/plugin/icon/plugin_logo.png"/>
+              </div>
+              <div class="info">
+                <div class="title">小黄工具箱·脚本</div>
+                <div class="version">脚本版本号：1.0.2</div>
+              </div>
+            </div>
+          </div>
+          <div class="download">
+            <button>下载安装</button>
+          </div>
+        </div>
+      </div>
+      <div class="plugin_info">
+        <div>
+          <div class="number-border">2</div>
+          <div class="border-bottom">下载安装脚本</div>
+        </div>
+        <div class="plugin_width">
+          <div class="introduce">
+            <div style="margin-top: 8px">
+              <div class="image">
+                <img src="https://yx-xiaohuang.oss-cn-shanghai.aliyuncs.com/plugin/icon/plugin_logo.png"/>
+              </div>
+              <div class="info">
+                <div class="title">小黄工具箱·脚本</div>
+                <div class="version">脚本版本号：1.0.2</div>
+              </div>
+            </div>
+          </div>
+          <div class="download">
+            <button>下载安装</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="plugin_headers">
+      <h2>安装方法</h2>
+    </div>
+    <div class="function">
+      <div class="step">
+        <div class="step-font">1/</div>
+        <div class="step-info">
+          <div>
+            安装“tampermonkey”插件
+          </div>
+          <div class="step-download">
+            <button>点击安装</button>
+          </div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-font">2/</div>
+        <div class="step-info">
+          <div>
+            请先确定已安装插件，再安装脚本。部分用户左键点击安装脚本按钮会下载js文件，改为右键-在新标签窗口打开页面即可正常安装。
+          </div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-font">3/</div>
+        <div class="step-info">
+          <div>
+            当前脚本为安装或开启
+          </div>
+          <div class="step-download">
+            <button>点击 / 安装</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

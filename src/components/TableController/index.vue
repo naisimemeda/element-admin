@@ -9,7 +9,8 @@
         :key="item.key"
         :label="item.label"
         :name="item.key"
-      />
+      >
+      </el-tab-pane>
     </el-tabs>
     <div v-if="options.form">
       <slot />
@@ -62,7 +63,6 @@ export default {
       let table = this.options.tabArr[val.index].url
       let urlTable = `${table}?table=${val.name}`
       this.$router.push(urlTable)
-      this.$emit('change', this.activeName)
     }
   }
 }

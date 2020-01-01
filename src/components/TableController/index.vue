@@ -60,9 +60,9 @@ export default {
   },
   methods: {
     handleChange(val) {
-      let table = this.options.tabArr[val.index].url
-      let urlTable = `${table}?table=${val.name}`
-      this.$router.push(urlTable)
+      let name = this.options.tabArr[val.index].name
+      let key = this.options.tabArr[val.index].key
+      this.$router.push({ name: name, query: {table: key}})
     }
   }
 }

@@ -123,7 +123,7 @@ export const constantRoutes = [
       }
     ]
   },
-  routes
+  ...routes
 ]
 
 /**

@@ -32,13 +32,13 @@
           tabArr: [
             {
               label: '激活码',
-              key: 'list',
-              url: '/code/list/code',
+              key: 'code',
+              name: 'code',
             },
             {
               label: '广告图',
               key: 'banner',
-              url: '/code/list/banner',
+              name: 'bannerList',
             }
           ],
           primaryText: '添加会员',
